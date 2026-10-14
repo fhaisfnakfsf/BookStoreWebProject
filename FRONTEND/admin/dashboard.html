@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Top Bar: Chào mừng và Profile -->
+    <div class="top-header">
+        <h2>Tổng quan</h2>
+        <div class="header-right">
+            <span>Xin chào, Admin!</span>
+            <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Admin Avatar">
+            <button class="noti-btn"><i class="fa-solid fa-bell"></i></button>
+        </div>
+    </div>
+
+    <!-- Nội dung Dashboard -->
+    <div class="dashboard-body">
+        
+        <!-- Bảng 4 Thẻ thống kê (Cards) -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="card-info">
+                    <p class="card-title">Tổng số sách</p>
+                    <p class="card-num">123</p>
+                </div>
+                <div class="card-icon book-bg"><i class="fa-solid fa-book"></i></div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="card-info">
+                    <p class="card-title">Đơn hàng mới</p>
+                    <p class="card-num">15</p>
+                </div>
+                <div class="card-icon order-bg"><i class="fa-solid fa-box-open"></i></div>
+            </div>
+
+            <div class="stat-card">
+                <div class="card-info">
+                    <p class="card-title">Doanh thu tháng</p>
+                    <p class="card-num">42.500.000 đ</p>
+                </div>
+                <div class="card-icon money-bg"><i class="fa-solid fa-wallet"></i></div>
+            </div>
+
+            <div class="stat-card">
+                <div class="card-info">
+                    <p class="card-title">Khách hàng</p>
+                    <p class="card-num">45</p>
+                </div>
+                <div class="card-icon user-bg"><i class="fa-solid fa-user"></i></div>
+            </div>
+        </div>
+
+        <!-- Layout 2 Cột: Biểu đồ & Đơn hàng gần đây -->
+        <div class="main-grid">
+            <!-- Cột Trái: Biểu đồ (Sử dụng tạm SVG để vẽ trực quan, thay JS sau) -->
+            <div class="grid-card col-left">
+                <h3>Biểu đồ doanh thu (7 ngày gần nhất)</h3>
+                <div class="chart-container">
+                    <svg viewBox="0 0 400 200" class="chart-svg">
+                        <!-- Đồ thị Grid -->
+                        <line x1="0" y1="40" x2="400" y2="40" stroke="#334155" stroke-dasharray="4" />
+                        <line x1="0" y1="90" x2="400" y2="90" stroke="#334155" stroke-dasharray="4" />
+                        <line x1="0" y1="140" x2="400" y2="140" stroke="#334155" stroke-dasharray="4" />
+                        <!-- Đường vẽ doanh thu màu Gradient -->
+                        <path d="M 0 160 Q 50 140, 100 110 T 200 150 T 300 90 T 400 60" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 0 180 Q 50 170, 100 130 T 200 170 T 300 120 T 400 80" fill="none" stroke="#a855f7" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+                        <!-- Chấm tròn mốc dữ liệu -->
+                        <circle cx="100" cy="110" r="4" fill="#3b82f6" />
+                        <circle cx="200" cy="150" r="4" fill="#3b82f6" />
+                        <circle cx="300" cy="90" r="4" fill="#3b82f6" />
+                        <circle cx="400" cy="60" r="4" fill="#3b82f6" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Cột Phải: Đơn hàng gần đây -->
+            <div class="grid-card col-right">
+                <h3>Đơn hàng gần đây</h3>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Mã ĐH</th>
+                            <th>Khách hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="order-id">#DH098</strong></td>
+                            <td>An Nguyễn</td>
+                            <td>257.000 đ</td>
+                            <td><span class="badge badge-pending">Chờ duyệt</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong class="order-id">#DH097</strong></td>
+                            <td>Minh Trần</td>
+                            <td>108.000 đ</td>
+                            <td><span class="badge badge-success">Đã duyệt</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong class="order-id">#DH096</strong></td>
+                            <td>Khánh Lê</td>
+                            <td>45.000 đ</td>
+                            <td><span class="badge badge-pending">Chờ duyệt</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

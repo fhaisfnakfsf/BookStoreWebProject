@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BookStore Admin - Hệ thống Quản trị</title>
+    <!-- Nhúng CSS cho thanh Sidebar Admin -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Nhúng FontAwesome để lấy icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- SIDEBAR BÊN TRÁI -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="fa-solid fa-book-open"></i>
+                <div>
+                    <span>BookStore</span>
+                    <small>Admin</small>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <!-- Chú ý: target="khung_noi_dung_admin" để nội dung đổi trong iframe -->
+                <li class="nav-item active">
+                    <a href="dashboard.html" target="khung_noi_dung_admin"><i class="fa-solid fa-chart-line"></i> Tổng quan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="manage-books.html" target="khung_noi_dung_admin"><i class="fa-solid fa-book"></i> Quản lý sách</a>
+                </li>
+                <li class="nav-item">
+                    <a href="manage-orders.html" target="khung_noi_dung_admin"><i class="fa-solid fa-cart-shopping"></i> Quản lý đơn hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a href="manage-users.html" target="khung_noi_dung_admin"><i class="fa-solid fa-users"></i> Quản lý người dùng</a>
+                </li>
+                <li class="nav-item">
+                    <a href="file-handler.html" target="khung_noi_dung_admin"><i class="fa-solid fa-file-invoice"></i> Đọc/Ghi File Text</a>
+                </li>
+            </ul>
+            <!-- Nút đăng xuất luôn nằm ở dưới cùng -->
+            <div class="logout-btn">
+                <a href="../login.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+            </div>
+        </aside>
+
+        <!-- KHUNG IFRAME BÊN PHẢI -->
+        <div class="content-area">
+            <iframe name="khung_noi_dung_admin" src="dashboard.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>

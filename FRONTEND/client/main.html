@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BookStore - Hệ thống Khách hàng</title>
+    <!-- Nhúng CSS cho thanh Sidebar -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Nhúng FontAwesome để lấy icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- SIDEBAR BÊN TRÁI -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="fa-solid fa-book-open"></i>
+                <span>BookStore</span>
+            </div>
+            <ul class="nav-menu">
+                <!-- Chú ý: target="khung_noi_dung" giúp link mở bên trong iframe -->
+                <li class="nav-item active">
+                    <a href="dashboard.html" target="khung_noi_dung"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-list"></i> Danh mục Sách <i class="fa-solid fa-chevron-down" style="font-size: 12px; margin-left: auto;"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="textbooks.html" target="khung_noi_dung">Sách giáo khoa</a></li>
+                        <li><a href="novels.html" target="khung_noi_dung">Tiểu thuyết</a></li>
+                        <li><a href="comics.html" target="khung_noi_dung">Truyện tranh</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" target="khung_noi_dung"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a href="orders.html" target="khung_noi_dung"><i class="fa-solid fa-file-lines"></i> Đơn hàng của tôi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" target="khung_noi_dung"><i class="fa-solid fa-user"></i> Tài khoản</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- KHUNG IFRAME BÊN PHẢI (NƠI HIỂN THỊ NỘI DUNG) -->
+        <div class="content-area">
+            <iframe name="khung_noi_dung" src="dashboard.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
